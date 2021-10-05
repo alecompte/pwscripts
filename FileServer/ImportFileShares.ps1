@@ -2,8 +2,8 @@
 ## Fonctionne avec ExportFileShares.ps1
 ## Besoin de rehaussement
 
-$PathToCsv = "" ##Modifié juste ceci
-
+$PathToCsv = ""
+$PathToErrorsCsv = ""
 
 
 
@@ -121,4 +121,4 @@ foreach ($s in $Shares) {
 
 
 Write-Host "Write the path for the error report"
-Export-Csv $Errors -NoTypeInformation
+$Errors | Export-Csv $ErrorsCsv -NoTypeInformation
