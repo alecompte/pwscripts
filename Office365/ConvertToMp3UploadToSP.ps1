@@ -1,3 +1,8 @@
+## This script was done to automatically transcode 3CX recordings and upload them to sharepoint
+## You'll have to adapt it to your own needs, but it will transcode 12 recordings simultaneously, while also saving (a lot) of space
+## Then it will upload it all to sharepoint magically
+## You'll have to use the checkin thing
+
 $basedir = ""
 $files = Get-ChildItem -Recurse -Filter *.wav
 $files | ForEach-Object -Parallel{
